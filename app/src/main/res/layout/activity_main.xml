@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:text="192" />
+
+
+        <TextView
+            android:id="@+id/tv_dot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/editText1"
+            android:text="@string/dot" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/tv_dot1"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:text="168" />
+
+        <TextView
+            android:id="@+id/tv_dot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/editText2"
+            android:text="@string/dot" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/tv_dot2"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/tv_dot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/editText3"
+            android:text="@string/dot" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/tv_dot3"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:text="51" />
+
+        <TextView
+            android:id="@+id/tv_mao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/editText4"
+            android:text="@string/maohao" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/tv_mao"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:text="8848" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="connect"
+            android:stateListAnimator="@drawable/lift_on_touch"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="连接"
+                    android:textColor="#ffffff"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="8dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edit_text"
+            android:ems="10"
+            android:hint="file"
+            android:inputType="text"
+            android:padding="2dp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="chooseFile"
+            android:stateListAnimator="@drawable/lift_on_touch"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:text="选择" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rl"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <android.support.design.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="断开"
+            app:cornerRadius="20dp"
+            android:onClick="disconnect"/>
+
+
+        <android.support.design.button.MaterialButton
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="1dp"
+            android:onClick="sendFile"
+            android:text="发送"
+            app:cornerRadius="20dp" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:indeterminate="false"
+        android:progress="10"
+        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+        android:layout_below="@id/ll1"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progress_bar"
+        />
+
+</RelativeLayout>
